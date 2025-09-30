@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="blog-title">
+                <i class="fas fa-feather-alt"></i>
+                My Personal Blog
+            </h1>
+            <p class="blog-tagline">Exploring life through words and experiences</p>
+        </div>
+    </header>
+    
+    <!-- Filter and Search -->
+    <section class="controls-section">
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search posts by title..."
+                >
+            </div>
+
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">
+                    All Posts
+                </button>
+                <button class="filter-btn" data-category="tech">
+                    <i class="fas fa-laptop-code"></i> Tech
+                </button>
+                <button class="filter-btn" data-category="travel">
+                    <i class="fas fa-plane"></i> Travel
+                </button>
+                <button class="filter-btn" data-category="food">
+                    <i class="fas fa-utensils"></i> Food
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div id="blogGrid" class="blog-grid">
+                <!-- Blog posts will be dynamically inserted here -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <p>No posts found matching your search.</p>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <button id="prevBtn" class="page-btn" disabled>
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <div id="pageNumbers" class="page-numbers"></div>
+                <button id="nextBtn" class="page-btn">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 My Personal Blog. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
